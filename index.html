@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desencriptador de Texto</title>
+    <title>Encriptador y Desencriptador de Texto</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Desencriptador de Texto</h1>
-        <form id="decryptForm">
-            <label for="encryptedText">Texto encriptado:</label><br>
-            <textarea id="encryptedText" name="encryptedText" rows="4" cols="50" placeholder="Introduce el texto encriptado..."></textarea><br>
-            <label for="decryptionKey">Clave de desencriptación:</label><br>
-            <input type="text" id="decryptionKey" name="decryptionKey" placeholder="Introduce la clave de desencriptación..."><br><br>
-            <button type="submit">Desencriptar</button>
+        <h1>Encriptador y Desencriptador de Texto</h1>
+        <form id="cryptoForm">
+            <label for="inputText">Texto:</label><br>
+            <textarea id="inputText" name="inputText" rows="4" cols="50" placeholder="Introduce el texto..."></textarea><br><br>
+            <label for="encryptionKey">Clave:</label><br>
+            <input type="text" id="encryptionKey" name="encryptionKey" placeholder="Introduce la clave..."><br><br>
+            <button type="button" onclick="encryptText()">Encriptar</button>
+            <button type="button" onclick="decryptText()">Desencriptar</button>
         </form>
-        <div id="decryptedTextDisplay">
-            <label for="decryptedText">Texto desencriptado:</label><br>
-            <textarea id="decryptedText" name="decryptedText" rows="4" cols="50" readonly></textarea>
+        <div id="outputTextDisplay">
+            <label for="outputText">Resultado:</label><br>
+            <textarea id="outputText" name="outputText" rows="4" cols="50" readonly></textarea>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
